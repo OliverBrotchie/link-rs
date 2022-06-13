@@ -27,7 +27,7 @@ fn main() {
 
 ```
 
-Complex example of an actix-web server using the `qrcode` feature:
+Complex example of an `actix-web` server using the `qrcode` feature:
 ```rust
 use actix_web::{
     get, http::header::ContentType, post, web, App, HttpResponse, HttpServer, Responder,
