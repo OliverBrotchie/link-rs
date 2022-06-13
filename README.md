@@ -15,7 +15,7 @@ A simple implementation of a URL generation module. Allows for qr-code generatio
 Basic Example:
 
 ```rs
-mod link-rs::LinkGenerator
+mod link_rs::LinkGenerator
 
 
 fn main() {
