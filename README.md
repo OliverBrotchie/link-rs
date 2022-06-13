@@ -22,7 +22,7 @@ fn main() {
     let mut link_gen = LinkGenerator::new("/some/redirect", 10);
 
     let link = link_gen::generate_url()
-    println!("{:?}",link) // Link { key: "vq5ejng0p6", url: "/some/redirect/vq5ejng0p6" }
+    println!("{:?}", link) // Link { key: "vq5ejng0p6", url: "/some/redirect/vq5ejng0p6" }
 }
 
 ```
@@ -113,7 +113,7 @@ async fn main() -> std::io::Result<()> {
 ### 🛠️ Add via `cargo.toml`
 
 ```toml
-link-rs = { version = "0.1.0", features = ["qrcode"] }
+link_rs = { version = "0.1.0", features = ["qrcode"] }
 ```
 
 ### 🔬 Test using `cargo test`
