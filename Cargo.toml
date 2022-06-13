@@ -1,0 +1,18 @@
+[package]
+name = "link-rs"
+authors = ["Oliver Brotchie <o.brotchie@gmail.com>"]
+description = "Generate hash-id based URLs and QR codes for use in URL shortening services."
+keywords = ["url", "link", "shortener", "qrcode"]
+repository = "https://github.com/OliverBrotchie/link-rs"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+harsh = "0.2.2"
+qrcode = { version = "0.12.0", optional = true }
+
+[features]
+qrcode = ["dep:qrcode"]
