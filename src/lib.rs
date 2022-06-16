@@ -113,7 +113,6 @@ impl LinkGenerator {
 #[cfg(test)]
 mod tests {
     use super::*;
-    #[cfg(feature = "qrcode")]
     use qrcode::types::QrError;
 
     #[test]
@@ -146,7 +145,6 @@ mod tests {
         );
     }
 
-    #[cfg(feature = "qrcode")]
     #[test]
     fn generate_qr() -> Result<(), QrError> {
         let mut s = LinkGenerator::new("/redirect", 10);

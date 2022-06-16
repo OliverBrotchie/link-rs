@@ -6,7 +6,7 @@
 
 </div>
 
-## About
+## 🔍 About
 
 A simple implementation of a URL generation module. Allows for qr-code generation using the [`qrcode`](https://crates.io/crates/qrcode) library.
 
@@ -32,11 +32,11 @@ To see a complete implementation of a url shortening service, please take a look
 ### 🛠️ Add via `cargo.toml`
 
 ```toml
-link_rs = { version = "0.1.0", features = ["qrcode"] }
+link_rs = { version = "0.1.1", features = ["qrcode"] }
 ```
 
 ### 🔬 Test using `cargo test`
 
 ```sh
-cargo test --features qrcode
+cargo test
 ```
