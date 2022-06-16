@@ -37,6 +37,19 @@ impl Link {
         }
     }
 }
+
+/// The link generator struct
+///
+/// ```rust
+/// mod link_rs::LinkGenerator
+///
+/// fn main() {
+///     // Create a new instance of a LinkGenerator
+///     let mut link_gen = LinkGenerator::new("/some/redirect", 10);
+///    // Generate a new link
+///    let link = link_gen::generate_url()
+/// }
+/// ```
 pub struct LinkGenerator {
     id: Wrapping<u64>,
     generator: Harsh,

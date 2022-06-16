@@ -32,7 +32,7 @@ To see a complete implementation of a url shortening service, please take a look
 ### 🛠️ Add via `cargo.toml`
 
 ```toml
-link_rs = { version = "0.1.1", features = ["qrcode"] }
+link_rs = { version = "0.1.2", features = ["qrcode"] }
 ```
 
 ### 🔬 Test using `cargo test`
