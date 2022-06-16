@@ -44,7 +44,7 @@ pub struct LinkGenerator {
 }
 
 impl LinkGenerator {
-    /// Create a new LinkGenerator with salt to produce a non-standard generation pattern.
+    /// Create a new LinkGenerator with salt to produce a non-predictable generation pattern.
     pub fn new_with_salt(redirect_url: &str, length: usize, salt: &str) -> LinkGenerator {
         let harsh = HarshBuilder::new()
             .salt(salt)
@@ -68,6 +68,18 @@ impl LinkGenerator {
         }
     }
 
+    /// Create a new LinkGenerator with a pre-set internal ID used to generate the hash for the next URL.
+    pub fn new_with_internal_id(
+        id: u64,
+        redirect_url: &str,
+        length: usize,
+        salt: Option<&str>,
+    ) -> LinkGenerator {
+        let mut gen = Self::new_with_salt(redirect_url, length, salt.unwrap_or(""));
+        gen.set_internal_id(id);
+        gen
+    }
+
     /// Create a new LinkGenerator.
     pub fn new(redirect_url: &str, length: usize) -> LinkGenerator {
         Self::new_with_salt(redirect_url, length, "")
@@ -78,6 +90,16 @@ impl LinkGenerator {
         let hashed = self.generator.encode(&[self.id.0]);
         self.id += 1;
         Link::new(&self.redirect_url, hashed)
+    }
+
+    /// Get the current value of the internal ID used to generate the hash for the next URL.
+    pub fn get_internal_id(&self) -> u64 {
+        self.id.0
+    }
+
+    /// Set the current value of the internal ID used to generate the hash for the next URL.
+    pub fn set_internal_id(&mut self, input: u64) {
+        self.id.0 = input
     }
 
     #[cfg(feature = "qrcode")]
