@@ -6,7 +6,7 @@
 
 </div>
 
-## 🔍 About
+## About
 
 A simple implementation of a URL generation module. Allows for qr-code generation using the [`qrcode`](https://crates.io/crates/qrcode) library.
 

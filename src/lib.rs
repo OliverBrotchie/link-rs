@@ -2,7 +2,7 @@
 //! Generate hash-id based URLs and QR codes for use in URL shortening services.
 //!
 //! Basic example:
-//! ```rs
+//! ```rust
 //! mod link_rs::LinkGenerator
 //!
 //! fn main() {
